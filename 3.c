@@ -42,41 +42,48 @@ void resgistroAlunos(posicao)
     for (posicao = 0; posicao < 1; posicao++)
     {
 
-        struct fichaAlunos Alunos;
+        struct fichaAlunos Alunos[100];
         {
 
-            printf("\n ==== Cadastro aluno %d ==== \n\n", posicao + 1);
+            printf("\n=======================================\n");
+            printf("        CADASTRO DE ALUNOS %d   ", posicao + 1);
+            printf("\n=======================================\n\n");
 
-            printf("Nome do aluno: \n");
-            fgets(Alunos.nomes[posicao], 50, stdin);
+            printf(" Nome do aluno: ");
+            fgets(&Alunos[100].nomes[posicao], 50, stdin);
 
-            printf("Informe seu email: ");
-            fgets(Alunos.emails[posicao], 50, stdin);
+            printf("\n Informe seu email: ");
+            fgets(&Alunos[100].emails[posicao], 50, stdin);
 
-            printf("Digite a matricula do aluno: ");
-            scanf("%d", &Alunos.matriculas[posicao]);
+            printf("\n Digite a matricula do aluno: ");
+            scanf("%d", &Alunos[100].matriculas[posicao]);
 
-            printf("Informe a nota A1: ");
-            scanf("%f", &Alunos.A1[posicao]);
+            printf(" Informe a nota A1: ");
+            scanf("%f", &Alunos[100].A1[posicao]);
 
-            printf("Informe a nota A2: ");
-            scanf("%f", &Alunos.A2[posicao]);
+            printf(" Informe a nota A2: ");
+            scanf("%f", &Alunos[100].A2[posicao]);
 
-            printf("Informe a nota A3: ");
-            scanf("%f", &Alunos.A3[posicao]);
-
+            printf(" Informe a nota A3: ");
+            scanf("%f", &Alunos[100].A3[posicao]);
+            
             printf("=========================\n\n");
+
+            return 0;
         }
     }
 }
 
-void listagemAlunos()
+void listagemAlunos(Alunos)
 {
+
 }
 
 void excluirAluno()
 {
+    printf("\nTCHAUUUU\n");
 }
+
 
 int main()
 {
@@ -92,7 +99,7 @@ int main()
         opcaoMain = menuPrincipal();
 
         switch (opcaoMain)
-        {
+        {  
         case 1:
             resgistroAlunos(posicao);
             break;
@@ -108,7 +115,7 @@ int main()
 
         system("pause");
 
-    } while (opcaoMain = !0);
-
+    } while (opcaoMain != 0);
+    
     return 0;
 }
