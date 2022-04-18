@@ -22,7 +22,20 @@ Os percentuais de participação das notas podem sofrer mudanças futuramente, b
 #include <stdlib.h>
 
 void limpaTela() {
-    system("cls");
+    // Menu Pricipal
+    printf("\n ======= MENU =======\n\n");
+    printf(" 1. Cadastrar Aluno\n");
+    printf(" 2. Listar alunos\n");
+    printf(" 3. Excluir aluno\n");
+    printf(" 0. Sair");
+
+    int opcao = 0;
+
+    do
+    {
+        printf("\n\nInforme uma das opcoes: ");
+        scanf("%d", &opcao);
+    } while (opcao < 0 || opcao > 3);
 }
 
 int menuPrincipal() {

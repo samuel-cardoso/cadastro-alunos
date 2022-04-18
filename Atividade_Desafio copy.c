@@ -30,10 +30,14 @@ int main()
         scanf("%d", &opcao);
     } while (opcao < 0 || opcao > 3);
 
-    // Opção de acesso
     int opcaoAcesso = opcao;
 
-    switch (opcaoAcesso)
+    do
+    {
+
+    // Opção de acesso
+    int opcaoAcesso = opcao;
+            switch (opcaoAcesso)
     {
     case 1:
         // CADASTRO DE ALUNOS
@@ -78,5 +82,13 @@ int main()
         break;
     default:
         break;
+    
     }
+
+    
+
+    } while (opcaoAcesso != 0);
+    
+
+
 }
