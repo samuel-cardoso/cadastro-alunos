@@ -29,7 +29,7 @@ void topoRegistro(posicao) {
     printf("\n=======================================\n");
 }
 
-/*void registroAlunos(nome, email, matricula, A1, A2, A3, posicao) {
+void registroAlunos(nome, email, matricula, A1, A2, A3, posicao) {
 
     for (int posicao = 0; posicao < 1; posicao++)
     {
@@ -57,10 +57,11 @@ void topoRegistro(posicao) {
 
     }
 
-}
-*/
+
+
 void rodaPeRegistro() {
     printf("\n---------------------------------------\n\n");
+    }
 }
 
 int menuPrincipal() {
@@ -96,8 +97,8 @@ void rodaPeSituacao() {
 int main() {
 
 // ------- VARIÁVEIS ----------
-char nome[100][50];
-char email[100][50];
+char nome[50][100];
+char email[50][100];
 int matricula[100];
 float A1[100], A2[100], A3[100];
 

@@ -122,7 +122,7 @@ int main() {
         break;
     }
 
-    system("pause");
+    
 
     }while (optMain != 0);
 
