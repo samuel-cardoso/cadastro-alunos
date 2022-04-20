@@ -64,21 +64,21 @@ void topoCadastro(int pos) {
     printf("\n=======================================\n\n");
 }
 
-void resgistroAlunos(char nome[], char email[], int matricula[], float A1[], float A2[], float A3[]) {
+int resgistroAlunos(char nomes[], char emails[], int matriculas[], float A1[], float A2[], float A3[]) {
 
     for (int pos = 0; pos < 1; pos++) {
 
     topoCadastro(pos);         
 
     printf(" Informe seu nome: ");
-    scanf("%s", &nome[pos]);
+    scanf("%s", &nomes[pos]);
 
     printf(" Informe seu email: ");
-    scanf("%s", &email[pos]);
+    scanf("%s", &emails[pos]);
 
     //Matrícula:
     printf(" Informe o numero da matricula: ");
-    scanf("%d", &matricula[pos]);
+    scanf("%d", &matriculas[pos]);
 
     //Nota A1:
     printf(" Sua nota na avaliacao A1: ");
@@ -92,7 +92,6 @@ void resgistroAlunos(char nome[], char email[], int matricula[], float A1[], flo
     printf(" Sua nota na avaliacao A3: ");
     scanf("%f", &A3[pos]);
 
-    linhaDeDivisao(pos);
 
     //printf("Nome: %s\n Email: %s\n Matricula: %d\n A1: %.1f\n A2: %.1f\n A3: %.1f\n\n", nome[pos], email[pos],matricula[pos],A1[pos],A2[pos],A3[pos]);
 
@@ -123,7 +122,7 @@ int main() {
 
     switch (optMain) {
     case 1:
-        resgistroAlunos(nomes, emails, matriculas, A1, A2, A3);
+        resgistroAlunos(char nomes[], char emails[], int matriculas[], float A1[], float A2[], float A3[]);
         break;
     case 2:
         printf("Listando alunos: ");
