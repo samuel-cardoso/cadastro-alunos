@@ -50,10 +50,10 @@ void resgistroAlunos(posicao)
             printf("\n=======================================\n\n");
 
             printf(" Nome do aluno: ");
-            fgets(&Alunos[100].nomes[posicao], 50, stdin);
+            scanf("%s", &Alunos[100].nomes[posicao]);
 
             printf("\n Informe seu email: ");
-            fgets(&Alunos[100].emails[posicao], 50, stdin);
+            scanf("%s", &Alunos[100].emails[posicao]);
 
             printf("\n Digite a matricula do aluno: ");
             scanf("%d", &Alunos[100].matriculas[posicao]);
