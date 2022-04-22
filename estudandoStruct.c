@@ -74,11 +74,11 @@ int main()
             break;
 
         case 2:
-            for (int posicao = 1; posicao <= 100; posicao++)
-            {
+           // for (int posicao = 1; posicao <= 100; posicao++)
+          //  {
                 printf("\n   --- Aluno %d --- \n\n", posicao);
                 printf(" Nome: %s\n Email: %s\n Matricula: %d\n A1: %.1f\n A2: %.1f\n A3: %.1f\n", Alunos[posicao].nomes, Alunos[posicao].emails, Alunos[posicao].matriculas, Alunos[posicao].A1, Alunos[posicao].A2, Alunos[posicao].A3);
-            }
+          //  }
             break;
 
         case 3:
