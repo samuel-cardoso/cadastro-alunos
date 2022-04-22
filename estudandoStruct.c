@@ -32,16 +32,22 @@ int menuRetorno()
 int main()
 {
 
-    for (int posicao = 0; posicao < 100; posicao++)
+    for (int posicao = 1; posicao < 100; posicao++)
     {
         int opcaoMenu = menuRetorno();
 
+        int posicao;
+
         switch (opcaoMenu)
         {
+        case 0:
+            printf("\n O PROGRAMA FOI ENCERRADO... \n");
+            exit(0);
+            break;
 
         case 1:
 
-            printf(" Em qual local voce quer cadastrar (0 ate 100): ");
+            printf(" Em qual local voce quer cadastrar (1 ate 100): ");
             scanf("%d", &posicao);
 
             printf("\n========== CADASTRO DE ALUNO %d ==========\n", posicao);
@@ -58,11 +64,17 @@ int main()
             printf(" Informe sua nota A3: ");
             scanf("%f", &Alunos[posicao].A3);
 
-            printf("\n    Seu cadastro foi feito com Sucesso!\n");
+            printf("\n*** Seu cadastro foi feito com Sucesso! ***\n\n");
+            printf(" Nome: %s\n Email: %s\n Matricula: %d\n A1: %.1f\n A2: %.1f\n A3: %.1f\n", Alunos[posicao].nomes, Alunos[posicao].emails, Alunos[posicao].matriculas, Alunos[posicao].A1, Alunos[posicao].A2, Alunos[posicao].A3);
+
             break;
 
         case 2:
-            printf("\n LISTANDO ALUNOS\n");
+            for (int posicao = 0; posicao < 100; posicao++)
+            {
+                printf("\n Aluno %d \n", posicao + 1);
+                printf(" Nome: %s\n Email: %s\n Matricula: %d\n A1: %.1f\n A2: %.1f\n A3: %.1f\n", Alunos[posicao].nomes, Alunos[posicao].emails, Alunos[posicao].matriculas, Alunos[posicao].A1, Alunos[posicao].A2, Alunos[posicao].A3);
+            }
             break;
 
         case 3:
@@ -70,7 +82,7 @@ int main()
             break;
 
         default:
-            printf("\n DADO INVALIDO \n");
+            printf("\n DADO INVALIDO\n");
             break;
         }
     }
