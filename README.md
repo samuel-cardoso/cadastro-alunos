@@ -5,10 +5,10 @@ Desafio avaliativo proposto na faculdade 🧠
     
    - Criar um programa para cadastrar até 100 alunos ;
    - Cada aluno deve ter as seguintes informações:
-      nome
-      email (OPCIONAL)
-      matrícula
-      notas A1, A2 e A3
+     - nome
+     - email (OPCIONAL)
+     - matrícula
+     - notas A1, A2 e A3
    - Capacidade de excluir um aluno já cadastrado pela matrícula
    - Listar os alunos cadastrados com nome, email e matrícula
    - Listar os alunos cadastrados com matrícula, nome, notas A1, A2 e A3, além da média final
