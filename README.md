@@ -1,5 +1,5 @@
 # Cadastro_De_Alunos
-Desafio avaliativo proposto na faculdade 🧠
+Desafio avaliativo proposto na faculdade 👨🏻‍🎓
 
   Objetivo:
     
