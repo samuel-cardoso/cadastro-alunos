@@ -36,7 +36,7 @@ int main()
     {
         int opcaoMenu = menuRetorno();
 
-        //int posicao;
+        // int posicao;
 
         switch (opcaoMenu)
         {
@@ -46,14 +46,16 @@ int main()
             break;
 
         case 1:
-            //printf(" Em qual local voce quer cadastrar (1 ate 100): ");
-            //scanf("%d", &posicao);
+            // printf(" Em qual local voce quer cadastrar (1 ate 100): ");
+            // scanf("%d", &posicao);
+
+            posicao = 1;
 
             if (Alunos[posicao].matriculas > 0)
             {
                 posicao++;
             }
-            
+
             printf("\n========== CADASTRO DE ALUNO %d ==========\n", posicao);
             printf("\n Informe seu nome: ");
             scanf("%s", Alunos[posicao].nomes);
@@ -71,8 +73,8 @@ int main()
             printf("\n*** Seu cadastro foi feito com Sucesso! ***\n");
             printf("\n   --- Aluno %d --- \n\n", posicao);
             printf(" Nome: %s\n Email: %s\n Matricula: %d\n A1: %.1f\n A2: %.1f\n A3: %.1f\n\n", Alunos[posicao].nomes, Alunos[posicao].emails, Alunos[posicao].matriculas, Alunos[posicao].A1, Alunos[posicao].A2, Alunos[posicao].A3);
-            
-            system ("\npause");
+
+            system("\npause");
             limpaTela();
 
             break;
@@ -85,9 +87,27 @@ int main()
                 if (Alunos[posicao].matriculas > 0)
                 {
                     printf("\n   --- Aluno %d --- \n\n", posicao);
-                    printf(" Nome: %s\n Email: %s\n Matricula: %d\n A1: %.1f\n A2: %.1f\n A3: %.1f\n", Alunos[posicao].nomes, Alunos[posicao].emails, Alunos[posicao].matriculas, Alunos[posicao].A1, Alunos[posicao].A2, Alunos[posicao].A3);
+                    printf(" Nome: %s\n Email: %s\n Matricula: %d\n A1: %.1f\n A2: %.1f\n A3: %.1f\n", Alunos[posicao].nomes, Alunos[posicao].emails,
+                           Alunos[posicao].matriculas, Alunos[posicao].A1, Alunos[posicao].A2, Alunos[posicao].A3);
+
+                    float finalA1 = Alunos[posicao].A1 * 0.20;
+                    float finalA2 = Alunos[posicao].A2 * 0.30;
+                    float finalA3 = Alunos[posicao].A3 * 0.50;
+
+                    float media = finalA1 + finalA2 + finalA3;
+                    float mediaFinal = media;
+                    printf("\n Nota Final = %.1f\n", mediaFinal);
+
+                    if (mediaFinal < 7)
+                    {
+                        printf(" REPROVAD0(A)\n");
+                    }
+                    else
+                    {
+                        printf(" APROVADO(A)\n");
+                    }
                 }
-           }
+            }
             break;
 
         case 3:
