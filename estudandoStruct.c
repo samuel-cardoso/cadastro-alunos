@@ -36,7 +36,7 @@ int main()
     {
         int opcaoMenu = menuRetorno();
 
-        int posicao;
+        //int posicao;
 
         switch (opcaoMenu)
         {
@@ -46,10 +46,14 @@ int main()
             break;
 
         case 1:
+            //printf(" Em qual local voce quer cadastrar (1 ate 100): ");
+            //scanf("%d", &posicao);
 
-            printf(" Em qual local voce quer cadastrar (1 ate 100): ");
-            scanf("%d", &posicao);
-
+            if (Alunos[posicao].matriculas > 0)
+            {
+                posicao++;
+            }
+            
             printf("\n========== CADASTRO DE ALUNO %d ==========\n", posicao);
             printf("\n Informe seu nome: ");
             scanf("%s", Alunos[posicao].nomes);
@@ -74,11 +78,16 @@ int main()
             break;
 
         case 2:
-           // for (int posicao = 1; posicao <= 100; posicao++)
-          //  {
-                printf("\n   --- Aluno %d --- \n\n", posicao);
-                printf(" Nome: %s\n Email: %s\n Matricula: %d\n A1: %.1f\n A2: %.1f\n A3: %.1f\n", Alunos[posicao].nomes, Alunos[posicao].emails, Alunos[posicao].matriculas, Alunos[posicao].A1, Alunos[posicao].A2, Alunos[posicao].A3);
-          //  }
+            limpaTela();
+
+            for (int posicao = 1; posicao <= 100; posicao++)
+            {
+                if (Alunos[posicao].matriculas > 0)
+                {
+                    printf("\n   --- Aluno %d --- \n\n", posicao);
+                    printf(" Nome: %s\n Email: %s\n Matricula: %d\n A1: %.1f\n A2: %.1f\n A3: %.1f\n", Alunos[posicao].nomes, Alunos[posicao].emails, Alunos[posicao].matriculas, Alunos[posicao].A1, Alunos[posicao].A2, Alunos[posicao].A3);
+                }
+           }
             break;
 
         case 3:
