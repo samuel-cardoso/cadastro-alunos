@@ -36,7 +36,7 @@ int main()
     {
         int opcaoMenu = menuRetorno();
 
-        // int posicao;
+         
 
         switch (opcaoMenu)
         {
@@ -46,10 +46,11 @@ int main()
             break;
 
         case 1:
+  
+
             // printf(" Em qual local voce quer cadastrar (1 ate 100): ");
             // scanf("%d", &posicao);
-
-            posicao = 1;
+            
 
             if (Alunos[posicao].matriculas > 0)
             {
@@ -106,12 +107,12 @@ int main()
                     {
                         printf(" APROVADO(A)\n");
                     }
-                }
+                } 
             }
             break;
 
         case 3:
-            printf("\n EXCLUINDO ALUNOS\n");
+            // printf("\n EXCLUINDO ALUNOS\n");
             break;
 
         default:
