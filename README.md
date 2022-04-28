@@ -17,4 +17,4 @@ Desafio avaliativo proposto na faculdade 👨🏻‍🎓
    - Listar os alunos reprovados com matrícula, nome e média final. Aprovados tem média igual ou superior a 7;
    - Os percentuais de participação das notas podem sofrer mudanças futuramente, bem como a nota de aprovação;
  
- Tecnologia utilizada: Linguagem C
+ Tecnologia utilizada: Linguagem C 
