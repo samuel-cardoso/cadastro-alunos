@@ -60,7 +60,7 @@ void listarAlunos()
 int main()
 {
 
-    for (int posicao = 1; posicao <= 5; posicao++)
+    for (int posicao = 1; posicao <= 100; posicao++)
     {
         int opcaoMenu = menuRetorno();
 
@@ -91,13 +91,59 @@ int main()
             break;
 
         case 2:
+           // limpaTela();
             listarAlunos();
             posicao--; // Correção de Posição
             break;
 
         case 3:
-            printf("\n EXCLUINDO ALUNOS\n");
+            printf("\n\n Digite o numero de matricula do aluno que voce deseja excluir: ");
+            int matAluno;
+            scanf("%d", &matAluno);
+
+            for (int tracker = 1; tracker <= 100; tracker++)
+            {
+                if (matAluno == Alunos[tracker].matriculas)
+                {
+                    printf("\n Nome: %s\n Email: %s\n Matricula: %d\n", Alunos[tracker].nomes, Alunos[tracker].emails, Alunos[tracker].matriculas);
+                    int resposta;
+
+                    do
+                    {
+                        printf("\n Voce tem certeza que deseja excluir este aluno?   1=SIM / 2=NAO     Resposta= ");
+                        scanf("%d", &resposta);
+                    } while (resposta < 1 || resposta > 2);
+                    
+                    if (resposta == 1)
+                    {
+
+                        for (int delAluno = tracker; delAluno < Alunos[tracker].matriculas; delAluno++)
+                        {
+                            Alunos[tracker].matriculas = Alunos[tracker+1].matriculas;
+
+
+                            Alunos[tracker].matriculas = Alunos[tracker+1].matriculas;
+                            
+
+                        }
+                            
+                            
+                        
+
+                        printf("\n\n ALUNO EXCLUIDO COM SUCESSO!\n\n");
+                        system("pause");
+                        posicao--; // Correção de Posição
+                    } else {
+                        printf("\n\n ALUNO NAO EXCLUIDO!\n\n");
+                        //posicao--; // Correção de Posição
+                    }
+                }
+                
+            }
+            
+            //printf("\n EXCLUINDO ALUNOS\n");
             posicao--; // Correção de Posição
+            limpaTela();
             break;
 
         default:
