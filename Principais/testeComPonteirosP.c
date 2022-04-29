@@ -77,7 +77,7 @@ void listagemAlunos()
 
     // Buscando alunos com o for.
 
-    for (int verAluno = 1 /*variável de controle*/; verAluno <= 100; verAluno++)
+    for (int verAluno = 1/*variável de controle*/; verAluno <= 100; verAluno++)
     {
         // Limitando a busca com if para imprimir na tela somente os alunos cadastrados.
 
@@ -140,8 +140,7 @@ void excluirAluno()
             int resposta;
 
             do
-            {   
-                
+            {       
                 printf("\n Voce tem certeza que deseja excluir o aluno %s ?   1=SIM / 2=NAO   Resposta: ", Alunos[buscaMat].nome);
                 scanf("%d", &resposta);
 
@@ -150,6 +149,9 @@ void excluirAluno()
 
             if (resposta == 1)
             {
+
+                // ALGORITMO DE EXCLUSÃO
+
                 printf("\n\n ALUNO EXCLUIDO COM SUCESSO\n\n");
             } else if (resposta == 2) { // usei else if porque se utilizasse somente o else ele ficaria direro no for, repetindo 100 vezes a mensagem. 
                 printf("\n\n ALUNO NAO EXCLUIDO \n\n");
@@ -172,7 +174,7 @@ int main()
         switch (opcao)
         {
         case 1:
-            cadastroAluno(posicao);
+            cadastroAluno();
             limpaTela();
             break;
         case 2:
