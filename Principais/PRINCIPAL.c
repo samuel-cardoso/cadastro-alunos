@@ -77,7 +77,7 @@ void listagemAlunos()
 
     // Buscando alunos com o for.
 
-    for (int verAluno = 1/*variável de controle*/; verAluno <= 100; verAluno++)
+    for (int verAluno = 1 /*variável de controle*/; verAluno <= 100; verAluno++)
     {
         // Limitando a busca com if para imprimir na tela somente os alunos cadastrados.
 
@@ -98,17 +98,17 @@ void listagemAlunos()
 
             if (mediaFinal < 7)
             {
-                printf(" REPROVAD0(A)\n");
+                printf(" REPROVAD0(A)\n\n");
             }
             else
             {
-                printf(" APROVADO(A)\n");
+                printf(" APROVADO(A)\n\n");
             }
         }
     }
 }
 
-void excluirAluno()
+void excluirAluno() // CONSERTAR ERROS
 {
     int numMatricula;
 
@@ -116,6 +116,11 @@ void excluirAluno()
     scanf("%d", &numMatricula);
 
     // Verificando se existe o número de matrícula
+    if (numMatricula != Alunos[posicao].matricula && numMatricula == Alunos[posicao].matricula )
+    {   
+        
+        printf("OPA");
+    }
 
     /* -- dando erro!
     for (int nExisteMat = 1; nExisteMat <=100; nExisteMat++)
@@ -133,19 +138,18 @@ void excluirAluno()
     for (int buscaMat = 1 /*variável de controle*/; buscaMat <= 100; buscaMat++)
     {
         if (numMatricula == Alunos[buscaMat].matricula)
-        {
-            printf("\n --- Aluno %d --- \n", posicao);
+        {   
+            printf("\n --- Aluno %d --- \n", posicao/*problema*/);
             printf("\n Nome: %s\n Email: %s\n Matricula: %d\n A1: %.1f\n A2: %.1f\n A3: %.1f\n\n", Alunos[buscaMat].nome, Alunos[buscaMat].email, Alunos[buscaMat].matricula, Alunos[buscaMat].A1, Alunos[buscaMat].A2, Alunos[buscaMat].A3);
 
             int resposta;
 
             do
-            {       
-                printf("\n Voce tem certeza que deseja excluir o aluno %s ?   1=SIM / 2=NAO   Resposta: ", Alunos[buscaMat].nome);
+            {
+                printf("\n Voce tem certeza que deseja excluir este aluno ?   1=SIM / 2=NAO   Resposta: ");
                 scanf("%d", &resposta);
 
             } while (resposta < 1 || resposta > 2);
-
 
             if (resposta == 1)
             {
@@ -153,12 +157,11 @@ void excluirAluno()
                 // ALGORITMO DE EXCLUSÃO
 
                 printf("\n\n ALUNO EXCLUIDO COM SUCESSO\n\n");
-            } else if (resposta == 2) { // usei else if porque se utilizasse somente o else ele ficaria direro no for, repetindo 100 vezes a mensagem. 
+            }
+            else if (resposta == 2)
+            { // usei else if porque se utilizasse somente o else ele ficaria direro no for, repetindo 100 vezes a mensagem.
                 printf("\n\n ALUNO NAO EXCLUIDO \n\n");
             }
-            
-
-
         }
     }
 }
