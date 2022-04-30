@@ -139,7 +139,7 @@ void excluirAluno() // CONSERTAR ERROS
     {
         if (numMatricula == Alunos[buscaMat].matricula)
         {   
-            printf("\n --- Aluno %d --- \n", posicao/*problema*/);
+            printf("\n --- Aluno %d --- \n", posicao/* --> PROBLEMA*/);
             printf("\n Nome: %s\n Email: %s\n Matricula: %d\n A1: %.1f\n A2: %.1f\n A3: %.1f\n\n", Alunos[buscaMat].nome, Alunos[buscaMat].email, Alunos[buscaMat].matricula, Alunos[buscaMat].A1, Alunos[buscaMat].A2, Alunos[buscaMat].A3);
 
             int resposta;
