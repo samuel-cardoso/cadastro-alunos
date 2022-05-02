@@ -118,7 +118,7 @@ void excluirAluno() // CONSERTAR ERROS
     // Verificando se existe o número de matrícula
     if (numMatricula != Alunos[posicao].matricula && numMatricula == Alunos[posicao].matricula )
     {   
-        
+
         printf("OPA");
     }
 
@@ -135,11 +135,12 @@ void excluirAluno() // CONSERTAR ERROS
 
     // Buscando o aluno referente a matrícula
 
-    for (int buscaMat = 1 /*variável de controle*/; buscaMat <= 100; buscaMat++)
+    for (int buscaMat = 1/*variável de controle*/; buscaMat <= 100; buscaMat++)
     {
         if (numMatricula == Alunos[buscaMat].matricula)
         {   
-            printf("\n --- Aluno %d --- \n", posicao/* --> PROBLEMA*/);
+            //printf("\n --- Aluno %d --- \n", posicao/*--> PROBLEMA*/);
+            printf("\n --- Aluno --- \n");
             printf("\n Nome: %s\n Email: %s\n Matricula: %d\n A1: %.1f\n A2: %.1f\n A3: %.1f\n\n", Alunos[buscaMat].nome, Alunos[buscaMat].email, Alunos[buscaMat].matricula, Alunos[buscaMat].A1, Alunos[buscaMat].A2, Alunos[buscaMat].A3);
 
             int resposta;
@@ -156,12 +157,12 @@ void excluirAluno() // CONSERTAR ERROS
 
                 // ALGORITMO DE EXCLUSÃO
 
-                printf("\n\n ALUNO EXCLUIDO COM SUCESSO\n\n");
+                printf("\n\n ALUNO(A) EXCLUIDO(A) COM SUCESSO\n\n");
             }
-            else if (resposta == 2)
-            { // usei else if porque se utilizasse somente o else ele ficaria direro no for, repetindo 100 vezes a mensagem.
-                printf("\n\n ALUNO NAO EXCLUIDO \n\n");
-            }
+            else if (resposta == 2) // usei else if porque se utilizasse somente o else ele ficaria direro no for, repetindo 100 vezes a mensagem.
+            { 
+                printf("\n\n ALUNO(A) NAO EXCLUIDO(A) \n\n");
+            } 
         }
     }
 }
