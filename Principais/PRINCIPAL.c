@@ -9,8 +9,7 @@ struct fichaAluno
 };
 
 struct fichaAluno Alunos[100];
-
-int posicao = 1;
+int posicao = 1; //para fazer o controle da estrutura
 
 limpaTela()
 {
@@ -49,11 +48,16 @@ void cadastroAluno()
         posicao++;
     }
 
+    // fflush(stdin);->faz uma limpeza no buffer do teclado.
+    // gets(); -> trabalha com strings, permitindo espaços serem lidos pelo programa.
+
     printf("\n========== CADASTRO DE ALUNO %d ==========\n", posicao);
     printf("\n Informe seu nome: ");
-    scanf("%s", Alunos[posicao].nome);
+    fflush(stdin); 
+    gets(Alunos[posicao].nome); 
     printf(" Informe seu email: ");
-    scanf("%s", Alunos[posicao].email);
+    fflush(stdin);
+    gets(Alunos[posicao].email);
     printf(" Informe o seu numero de matricula: ");
     scanf("%d", &Alunos[posicao].matricula);
     printf(" Informe sua nota A1: ");
@@ -68,6 +72,7 @@ void cadastroAluno()
 
 void listagemAlunos()
 {
+    // BUSCA GULOSA!!!
     // Verificando se há o que buscar com if
 
     if (Alunos[posicao].matricula == 0)
@@ -118,7 +123,6 @@ void excluirAluno() // CONSERTAR ERROS
     // Verificando se existe o número de matrícula
     if (numMatricula != Alunos[posicao].matricula && numMatricula == Alunos[posicao].matricula )
     {   
-
         printf("OPA");
     }
 
@@ -159,7 +163,7 @@ void excluirAluno() // CONSERTAR ERROS
 
                 printf("\n\n ALUNO(A) EXCLUIDO(A) COM SUCESSO\n\n");
             }
-            else if (resposta == 2) // usei else if porque se utilizasse somente o else ele ficaria direro no for, repetindo 100 vezes a mensagem.
+            else if (resposta == 2) 
             { 
                 printf("\n\n ALUNO(A) NAO EXCLUIDO(A) \n\n");
             } 
