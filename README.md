@@ -1,4 +1,4 @@
-# Cadastro_De_Alunos
+# Cadastro de Alunos
 Desafio avaliativo proposto na faculdade 👨🏻‍🎓
 
   Objetivo:
