@@ -1,14 +1,15 @@
 #include <stdio.h>
-#include <stdlib.h>
+#include <stdlib.h> 
 
-struct fichaAluno
+typedef struct
 {
     char nome[50], email[50];
     int matricula;
     float A1, A2, A3;
-};
+} fichaAluno;
 
-struct fichaAluno Alunos[100];
+fichaAluno Alunos[100];
+
 int posicao = 1; //para fazer o controle da estrutura
 
 limpaTela()
@@ -48,8 +49,8 @@ void cadastroAluno()
         posicao++;
     }
 
-    // fflush(stdin);->faz uma limpeza no buffer do teclado.
-    // gets(); -> trabalha com strings, permitindo espaços serem lidos pelo programa.
+    // fflush(stdin); -> faz uma limpeza no buffer do teclado.
+    // gets(); -> trabalha com strings, permitindo os espaços serem lidos pelo programa.
 
     printf("\n========== CADASTRO DE ALUNO %d ==========\n", posicao);
     printf("\n Informe seu nome: ");
@@ -113,63 +114,13 @@ void listagemAlunos()
     }
 }
 
-void excluirAluno() // CONSERTAR ERROS
+void excluirAluno() // FAZER ALGORITMO DE EXCLUSÃO
 {
-    int numMatricula;
 
-    printf("\n Informe o numero de matricula do(a) aluno(a) que voce deseja excluir: ");
-    scanf("%d", &numMatricula);
 
-    // Verificando se existe o número de matrícula
-    if (numMatricula != Alunos[posicao].matricula && numMatricula == Alunos[posicao].matricula )
-    {   
-        printf("OPA");
-    }
 
-    /* -- dando erro!
-    for (int nExisteMat = 1; nExisteMat <=100; nExisteMat++)
-    {
-        if (numMatricula != Alunos[nExisteMat].matricula && numMatricula > 0 )
-        {
-            printf("\n\nMATRICULA NAO ENCONTRADA\n\n");
-        }
+} 
 
-    }
-    */
-
-    // Buscando o aluno referente a matrícula
-
-    for (int buscaMat = 1/*variável de controle*/; buscaMat <= 100; buscaMat++)
-    {
-        if (numMatricula == Alunos[buscaMat].matricula)
-        {   
-            //printf("\n --- Aluno %d --- \n", posicao/*--> PROBLEMA*/);
-            printf("\n --- Aluno --- \n");
-            printf("\n Nome: %s\n Email: %s\n Matricula: %d\n A1: %.1f\n A2: %.1f\n A3: %.1f\n\n", Alunos[buscaMat].nome, Alunos[buscaMat].email, Alunos[buscaMat].matricula, Alunos[buscaMat].A1, Alunos[buscaMat].A2, Alunos[buscaMat].A3);
-
-            int resposta;
-
-            do
-            {
-                printf("\n Voce tem certeza que deseja excluir este aluno ?   1=SIM / 2=NAO   Resposta: ");
-                scanf("%d", &resposta);
-
-            } while (resposta < 1 || resposta > 2);
-
-            if (resposta == 1)
-            {
-
-                // ALGORITMO DE EXCLUSÃO
-
-                printf("\n\n ALUNO(A) EXCLUIDO(A) COM SUCESSO\n\n");
-            }
-            else if (resposta == 2) 
-            { 
-                printf("\n\n ALUNO(A) NAO EXCLUIDO(A) \n\n");
-            } 
-        }
-    }
-}
 
 int main()
 {
