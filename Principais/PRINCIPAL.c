@@ -140,15 +140,8 @@ void excluirAluno() // FAZER ALGORITMO DE EXCLUSÃO
             {
                 // ALGORITMO DE EXCLUSÃO
 
-                for (int excAluno = 0; excAluno <= 100; excAluno++)
-                {
-                    if (Alunos[buscaMat].matricula == Alunos[excAluno].matricula)
-                    {
-                        Alunos[posicao] = Alunos[posicao+1];
-                    }   
+                 
                     
-                }
-                    Alunos[posicao--];
                 printf("\n ALUNO(A) EXCLUIDO(A) COM SUCESSO\n\n");
             } else {
                 printf("\n ALUNO(A) NAO EXCLUIDO(A)\n\n");
