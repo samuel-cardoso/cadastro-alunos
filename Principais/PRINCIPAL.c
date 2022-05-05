@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include <stdlib.h> 
+#include <stdlib.h>
 
 typedef struct
 {
@@ -10,7 +10,7 @@ typedef struct
 
 fichaAluno Alunos[100];
 
-int posicao = 1; //para fazer o controle da estrutura
+int posicao = 1; // para fazer o controle da estrutura
 
 limpaTela()
 {
@@ -54,8 +54,8 @@ void cadastroAluno()
 
     printf("\n========== CADASTRO DE ALUNO %d ==========\n", posicao);
     printf("\n Informe seu nome: ");
-    fflush(stdin); 
-    gets(Alunos[posicao].nome); 
+    fflush(stdin);
+    gets(Alunos[posicao].nome);
     printf(" Informe seu email: ");
     fflush(stdin);
     gets(Alunos[posicao].email);
@@ -83,7 +83,7 @@ void listagemAlunos()
 
     // Buscando alunos com o for.
 
-    for (int verAluno = 1 /*variável de controle*/; verAluno <= 100; verAluno++)
+    for (int verAluno = 0 /*variável de controle*/; verAluno <= 100; verAluno++)
     {
         // Limitando a busca com if para imprimir na tela somente os alunos cadastrados.
 
@@ -116,11 +116,50 @@ void listagemAlunos()
 
 void excluirAluno() // FAZER ALGORITMO DE EXCLUSÃO
 {
+    int numMatricula;
+
+    printf("\n Digite a matricula do aluno que voce deseja excluir: ");
+    scanf("%d", &numMatricula);
+
+    for (int buscaMat = 0; buscaMat <= 100; buscaMat++)
+    {
+        if (numMatricula == Alunos[buscaMat].matricula)
+        {
+            // printf("\n --- Aluno %d --- \n", posicao);
+            printf("\n Nome: %s\n Email: %s\n Matricula: %d\n A1: %.1f\n A2: %.1f\n A3: %.1f\n\n", Alunos[buscaMat].nome, Alunos[buscaMat].email, Alunos[buscaMat].matricula, Alunos[buscaMat].A1, Alunos[buscaMat].A2, Alunos[buscaMat].A3);
+
+            int resposta;
+
+            while (resposta > 2 || resposta < 1)
+            {
+                printf(" Voce tem certeza que deseja excluir este aluno? 1-SIM/2-NAO    Resposta: ");
+                scanf("%d", &resposta);
+            }
+
+            if (resposta == 1)
+            {
+                // ALGORITMO DE EXCLUSÃO
+
+                for (int excAluno = 0; excAluno <= 100; excAluno++)
+                {
+                    if (Alunos[buscaMat].matricula == Alunos[excAluno].matricula)
+                    {
+                        Alunos[posicao] = Alunos[posicao+1];
+                    }   
+                    
+                }
+                    Alunos[posicao--];
+                printf("\n ALUNO(A) EXCLUIDO(A) COM SUCESSO\n\n");
+            } else {
+                printf("\n ALUNO(A) NAO EXCLUIDO(A)\n\n");
+            }
+            
 
 
 
-} 
-
+        }
+    }
+}
 
 int main()
 {
