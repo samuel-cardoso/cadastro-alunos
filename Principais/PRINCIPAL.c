@@ -10,7 +10,7 @@ typedef struct
 
 fichaAluno Alunos[100];
 
-int posicao = 1; // para fazer o controle da estrutura
+int posicao = 0; // para fazer o controle da estrutura / Controle Alunos
 
 limpaTela()
 {
@@ -44,6 +44,7 @@ int gerarMenu()
 void cadastroAluno()
 
 {
+
     if (Alunos[posicao].matricula > 0)
     {
         posicao++;
@@ -138,18 +139,27 @@ void excluirAluno() // FAZER ALGORITMO DE EXCLUSÃO
 
             if (resposta == 1)
             {
-                // ALGORITMO DE EXCLUSÃO
+                
+                //ESTUDAR ESTE ALGORITMO DE EXCLUSÃO -> FIZ, mas não entendi como fiz KKK
 
-                 
-                    
+                for (int m = buscaMat; m <= posicao; m++)
+                {
+                    Alunos[m] = Alunos[m + 1];
+                }
+
+                Alunos[posicao--];
+                
+
+                /* Alunos[buscaMat] = Alunos[buscaMat +1];
+
+                Alunos[buscaMat]--;
+                */
                 printf("\n ALUNO(A) EXCLUIDO(A) COM SUCESSO\n\n");
-            } else {
+            }
+            else
+            {
                 printf("\n ALUNO(A) NAO EXCLUIDO(A)\n\n");
             }
-            
-
-
-
         }
     }
 }
