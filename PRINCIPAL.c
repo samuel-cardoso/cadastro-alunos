@@ -44,8 +44,12 @@ int gerarMenu()
 void cadastroAluno()
 
 {
+    if (posicao > 0) // para sempre começar do zero.
+    {
+        posicao++;
+    }
 
-    if (Alunos[posicao].matricula > 0)
+    if (Alunos[posicao].matricula > 0) // pular os espaços já preenchidos.
     {
         posicao++;
     }
