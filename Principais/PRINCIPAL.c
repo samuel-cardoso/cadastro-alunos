@@ -74,13 +74,14 @@ void cadastroAluno()
 
 void listagemAlunos()
 {
-    // BUSCA GULOSA!!!
     // Verificando se há o que buscar com if
 
+    /*
     if (Alunos[posicao].matricula == 0)
     {
-        printf("\n NENHUM aluno cadastrado ate o momento.\n\n");
+        printf("\n NENHUM aluno cadastrado.\n");
     }
+    */
 
     // Buscando alunos com o for.
 
@@ -115,7 +116,7 @@ void listagemAlunos()
     }
 }
 
-void excluirAluno() // FAZER ALGORITMO DE EXCLUSÃO
+void excluirAluno()
 {
     int numMatricula;
 
@@ -142,18 +143,13 @@ void excluirAluno() // FAZER ALGORITMO DE EXCLUSÃO
                 
                 //ESTUDAR ESTE ALGORITMO DE EXCLUSÃO -> FIZ, mas não entendi como fiz KKK
 
-                for (int m = buscaMat; m <= posicao; m++)
+                for (int excAluno = buscaMat; excAluno <= posicao; excAluno++)
                 {
-                    Alunos[m] = Alunos[m + 1];
+                    Alunos[excAluno] = Alunos[excAluno + 1];
                 }
 
                 Alunos[posicao--];
-                
 
-                /* Alunos[buscaMat] = Alunos[buscaMat +1];
-
-                Alunos[buscaMat]--;
-                */
                 printf("\n ALUNO(A) EXCLUIDO(A) COM SUCESSO\n\n");
             }
             else
