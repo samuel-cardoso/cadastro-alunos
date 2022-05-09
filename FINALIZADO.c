@@ -10,7 +10,7 @@ typedef struct
 
 fichaAluno Alunos[100];
 
-int posicao = 0; // para fazer o controle da estrutura / Controle Alunos
+int posicao = 0; // para fazer o controle da estrutura / Controle Alunos // PODERIA FAZER UM PONTEIRO COM A VARIÁVEL DE CONTROLE?
 
 limpaTela()
 {
