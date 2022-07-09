@@ -18,3 +18,5 @@ Desafio avaliativo proposto na faculdade 👨🏻‍🎓
    - Os percentuais de participação das notas podem sofrer mudanças futuramente, bem como a nota de aprovação;
  
  Tecnologia utilizada: Linguagem C 
+ 
+ Situação do projeto: Finalizado
