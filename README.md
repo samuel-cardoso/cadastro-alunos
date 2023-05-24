@@ -1,6 +1,6 @@
-# Projeto | Cadastro de Alunos 👨🏻‍🎓
+# Projeto | Cadastro de Alunos
 
-Desafio avaliativo proposto na faculdade :school:
+Desafio avaliativo proposto na faculdade
 
   Objetivo:
     
@@ -21,5 +21,5 @@ Desafio avaliativo proposto na faculdade :school:
  
  #### Tecnologia utilizada: __Linguagem C__. 
  ***
- ### Situação do projeto: Finalizado :heavy_check_mark:
+ ### Situação do projeto: Finalizado
  ***
