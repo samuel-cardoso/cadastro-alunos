@@ -35,7 +35,7 @@
   
  
  ## Tecnologia 
- A linguagem escolhida para criar o programa proposto é a linguagem C.
+ A linguagem escolhida para criar o programa proposto foi a linguagem C.
 
 ## Contribuir🚀
 Contribua para melhorarmos este projeto juntos, clone esse repositório e crie sua branch de trabalho.
