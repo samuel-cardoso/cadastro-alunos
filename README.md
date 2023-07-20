@@ -1,15 +1,6 @@
 <h1 align="center">Cadastro de Alunos</h1>
 
-<p align="center">
-  &bull; <a href="#enunciado">Enunciado</a>
-  &bull; <a href="#tecnologias">Tecnologia</a>
-  &bull; <a href="#contribuir">Contribuir</a>
-  &bull; <a href="#licença">Licença</a>
-</p>
-
 **<p align="center">Desafio avaliativo proposto na faculdade que consiste em escrever um algoritmo em C ou C++ ou Java, no qual deve ser construído um cadastro de alunos.</p>**
-
- ## Enunciado
     
    - Criar um programa para cadastrar até 100 alunos.
      
@@ -32,29 +23,3 @@
    - Listar os alunos reprovados com matrícula, nome e média final. Aprovados tem média igual ou superior a 7.
      
    - Os percentuais de participação das notas podem sofrer mudanças futuramente, bem como a nota de aprovação.
-  
- 
- ## Tecnologia 
- A linguagem escolhida para criar o programa proposto foi a linguagem C.
-
-## Contribuir🚀
-Contribua para melhorarmos este projeto juntos, clone esse repositório e crie sua branch de trabalho.
-```
-git clone https://github.com/samuel-cardoso/cadastro-alunos.git
-```
-Ao concluir, crie um Pull Request descrevendo a solução implementada ou recurso adicionado, se houver, e inclua capturas de tela das alterações visuais realizadas.
-
-<p>
-  <a href="https://docs.github.com/pt/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request">
-    Como fazer um Pull Request
-  </a>
-</p>
-
-<p>
-  <a href="https://gist.github.com/joshbuchea/6f47e86d2510bce28f8e7f42ae84c716">
-    Padrão de Confirmação
-  </a>
-</p>
-
-## Licença 📃
-Este projeto está sob licença do [MIT](https://github.com/samuel-cardoso/a1-psc/blob/main/LICENSE).
